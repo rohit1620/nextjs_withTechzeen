@@ -1,10 +1,10 @@
 'use client'
-import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
+
 const Contact = () => {
-    const router=useRouter();
+   let router=useRouter()
     const handleRouting=(value)=>{
          router.push(value)
     }
@@ -21,6 +21,14 @@ const Contact = () => {
      <hr />
      <button style={{marginLeft:"20px",marginTop:"20px",backgroundColor:"black",color:"white"}} onClick={()=>handleRouting("./home")}>Home</button> <br /><br />
      <button style={{marginLeft:"20px",marginTop:"20px"}} onClick={()=>handleRouting("./about")}>About</button>
+
+     <hr /> <hr />
+      {/* Nested Routing */}
+     <div>
+      <br />
+        <Link href="/contact/company"><span>Company</span></Link> <br /><br />
+         <button onClick={()=>handleRouting("/contact/employees")}>Employee</button>
+     </div>
     </div>
   )
 }
