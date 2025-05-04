@@ -1,3 +1,4 @@
+import Button from "./Button";
 async function geteData() {
   let post = await fetch("https://jsonplaceholder.typicode.com/posts");
   post = await post.json();
@@ -12,10 +13,13 @@ const pagePost = async () => {
     <div>
       <h1>Post This is server side component</h1>
       {posts.map((el) => (
-        <h3 key={el.id}>
-          #{el.id} &nbsp;
-          {el.title}
-        </h3>
+        <div key={el.id}>
+          <h3>
+            #{el.id} &nbsp;
+            {el.title}
+          </h3>
+          <Button data={el.id} />
+        </div>
       ))}
     </div>
   );
