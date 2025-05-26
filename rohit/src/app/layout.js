@@ -25,6 +25,9 @@ export default function RootLayout({ children }) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Exile&display=swap" rel="stylesheet"></link>
       </head> */}
+      {/* <head>
+        <script src="/features.js"/>
+      </head> */}
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
